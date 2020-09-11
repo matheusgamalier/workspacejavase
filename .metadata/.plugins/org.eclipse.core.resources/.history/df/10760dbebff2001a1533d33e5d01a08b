@@ -1,0 +1,28 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class VendaProduto {
+
+	public static void main(String[] args) {
+		String nomeProduto = JOptionPane.showInputDialog("Nome do produto").toUpperCase();
+		int qtde = Integer.parseInt(JOptionPane.showInputDialog("Quantidade"));
+		double precoUnitario = Double.parseDouble(JOptionPane.showInputDialog("Preço"));
+		double precoFinal = precoUnitario * qtde;
+		String formaPagamento = JOptionPane.showInputDialog("Forma de pagamento").toUpperCase();
+		
+		if (formaPagamento.equals("VISTA")) {
+			if (qtde > 10) {
+				precoFinal *= 0.9;
+			}
+			else {
+				precoFinal *= 0.95;
+			}
+		}
+		
+		System.out.println();
+		System.out.println("Produto ...: " + nomeProduto);
+		System.out.println("Preço final: " + precoFinal);
+	}
+
+}

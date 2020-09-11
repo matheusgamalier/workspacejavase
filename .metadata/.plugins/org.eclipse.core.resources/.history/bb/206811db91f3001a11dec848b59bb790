@@ -1,0 +1,15 @@
+package br.com.universidade.modelo;
+
+public class Aluno {
+	private int rm;
+	private String nome;
+	private String email;
+	
+	public void preencherNome(String nome) {
+		this.nome = nome.toUpperCase();
+	}
+	
+	public void preencherEmail(String email) {
+		this.email = email.toLowerCase();
+	}
+}

@@ -1,0 +1,13 @@
+package variaveis;
+
+import java.util.Scanner;
+
+public class ManipulaString {
+
+	public static void(String[] args) {
+		Scanner tec = new Scanner(System.in);
+		System.out.print("Digite o e-mail");
+		String email = tec.next();
+		System.out.println("Original: " + email);
+	}
+}

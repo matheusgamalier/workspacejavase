@@ -1,0 +1,22 @@
+package variaveis;
+
+import java.util.Scanner;
+
+public class Itau {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+		String nome = teclado.next();
+		
+		int idade = 23;
+		double altura = 1.70;
+		double peso = 68;
+		double imc = peso / (altura * altura);
+		
+		System.out.println(nome);
+		System.out.println(idade);
+		System.out.println(altura);
+	}
+	
+}

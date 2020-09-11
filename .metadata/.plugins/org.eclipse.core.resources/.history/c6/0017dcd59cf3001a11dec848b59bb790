@@ -1,0 +1,22 @@
+package br.com.universidade.modelo;
+
+public class Professor {
+	private int id;
+	private String nome;
+	private float valorHora;
+	private String area;
+	
+	public void setNome(String nome) { this.nome = nome.toUpperCase(); }
+	
+	public void setArea(String area) { this.area = nome.toUpperCase(); }
+	
+	public void setValorHora(float valorHora) { this.valorHora = valorHora; }
+	
+	public void setId(int id) {	this.id = id; }
+	
+	public String getNome() { return this.nome; }
+	
+	public String getValorHora() { return this.ValorHora; }
+	
+	public int getRm() { return this.rm; }
+}

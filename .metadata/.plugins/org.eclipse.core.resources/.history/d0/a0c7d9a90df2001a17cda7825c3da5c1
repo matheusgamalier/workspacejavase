@@ -1,0 +1,24 @@
+package variaveis;
+
+import java.util.Scanner;
+
+public class ManipulaString {
+
+	public static void main (String[] args) {
+		Scanner tec = new Scanner(System.in);
+		
+		System.out.print("Digite o e-mail: ");
+		String email = tec.next();
+		
+		System.out.println("Original: " + email);
+		System.out.println("Minuscula: " + email.toLowerCase());
+		System.out.println("Maiuscula: " + email.toUpperCase());
+		System.out.println("Qtde Caracteres: " + email.length());
+		System.out.println("Posição do @: " + email.indexOf("@"));
+		System.out.println("Do 2º até 4º: " + email.substring(1, 4));
+		System.out.println("A partir do 3º: " + email.substring(2));
+		System.out.println("Usuário: " + email.substring(0, email.indexOf("@")));
+		
+		tec.close();
+	}
+}
