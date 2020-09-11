@@ -18,6 +18,15 @@ public class TesteProfessor {
 		System.out.println("Nome: " + p.getNome());
 		System.out.println("Area: " + p.getArea());
 		System.out.println("Valor Hora: " + p.getValorHora());
+		
+		Professor p2 = new Professor();
+		p2.setAll(
+					Integer.parseInt(JOptionPane.showInputDialog("Digite o ID")),
+					JOptionPane.showInputDialog("Digite o nome"),
+					JOptionPane.showInputDialog("Digite a area"),
+					Float.parseFloat(JOptionPane.showInputDialog("Digite o valor hora"))
+				);
+		System.out.println(p2.getAll());
 
 	}
 
