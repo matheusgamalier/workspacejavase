@@ -42,7 +42,7 @@ public class NumeroOrdemDecrescente {
 				n3 = aux;
 			}
 			
-			
+			i.close();
 			System.out.printf("Números em ordem decrescente: %d, %d, %d", n1, n2, n3);
 		}
 		
