@@ -10,13 +10,13 @@ public class Produto {
     
     public Produto() {}
     
-    public Produto(int i, String d, float vc, float vv, int q, String t) {
-    	id = i;
-    	descricao = d;
-    	valorCompra = vc;
-    	valorVenda = vv;
-    	qtde = q;
-    	tipo = t;
+    public Produto(int id, String descricao, float valorCompra, float valorVenda, int qtde, String tipo) {
+    	this.id = id;
+    	this.descricao = descricao;
+    	this.valorCompra = valorCompra;
+    	this.valorVenda = valorVenda;
+    	this.qtde = qtde;
+    	this.tipo = tipo;
     }
     
     public void entrarEstoque(int q) {

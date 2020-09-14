@@ -1,4 +1,4 @@
-package br.com.ecommerce.tela.Magica;
+package br.com.ecommerce.tela;
 
 import javax.swing.JOptionPane;
 

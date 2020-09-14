@@ -2,7 +2,7 @@ package br.com.ecommerce.implementacao;
 
 import br.com.ecommerce.modelo.Produto;
 import br.com.ecommerce.modelo.Venda;
-import br.com.ecommerce.tela.Magica.Magica;
+import br.com.ecommerce.tela.Magica;
 
 public class AplicacaoVenda {
 	
