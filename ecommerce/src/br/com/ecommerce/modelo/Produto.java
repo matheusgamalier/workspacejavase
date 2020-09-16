@@ -23,7 +23,6 @@ public class Produto {
         qtde+=q;
     }
 
-
     public void saidaEstoque(int q) {
         qtde-=q;
     }
