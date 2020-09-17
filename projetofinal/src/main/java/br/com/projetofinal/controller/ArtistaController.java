@@ -38,9 +38,14 @@ public class ArtistaController {
 	}
 	
 	@PostMapping("/artista/add")
-	public ResponseEntity<String> add(@RequestBody Artista artista) {
-		dao.save(artista);
-		return ResponseEntity.ok("Salvo");
+	public ResponseEntity<Artista> add(@RequestBody Artista artista) {
+		try {
+			dao.save(artista);
+			return ResponseEntity.ok(artista);
+		} catch(Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(500).build();
+		}
 	}
 
 }
