@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,10 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.projetofinal.beans.Musica;
 import br.com.projetofinal.dao.MusicaDAO;
 
+@CrossOrigin("*")
 @RestController
 public class MusicaController {
 	@Autowired
 	private MusicaDAO dao;
+	
+	@GetMapping("/musicas/lancamentos/{tipo}")
+	public ResponseEntity<ArrayList<Musica>> getLancamento(@PathVariable int tipo) {
+		ArrayList<Musica> lista = dao.findByLancamento(tipo);
+		return lista.size() == 0 ? ResponseEntity.status(404).build() : ResponseEntity.ok(lista);
+	}
 	
 	@PostMapping("/musica/add")
 	public ResponseEntity<Musica> add(@RequestBody Musica musica) {
